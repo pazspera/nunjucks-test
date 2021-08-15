@@ -1,7 +1,11 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const path = require('path')
 
 var app = express()
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/marta', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
 
 nunjucks.configure('views', {
   autoescape: true,
