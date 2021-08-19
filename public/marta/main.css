@@ -11,3 +11,9 @@ body{
 .card{
     padding: 0 !important;
 }
+
+@media(min-width: 992px){
+    .card {
+        max-width: 350px;
+    }
+}
