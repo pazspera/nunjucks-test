@@ -1,5 +1,9 @@
 {% extends '_base.html' %}
 
+{% from '_card.html' import card %}
+
+{% include '_card.html' %}
+
 {% set title = 'Home' %}
 
 {% block content %}
@@ -7,5 +11,21 @@
         <h1>Hello World!</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid perspiciatis minus incidunt.</p>
         <a href="./page.html">Let's go visit the Page page</a>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-3 gap-3">
+            {{ card('Dominion', '8 de Agosto 2021')}}
+            {{ card('Star Realms', '15 de Agosto 2021')}}
+            {{ card('Alquimistas', '17 de Agosto 2021')}}
+        </div>               
+
+        <!-- {% macro field(name, value='', type='text') %}
+        <div class="field">
+        <input type="{{ type }}" name="{{ name }}"
+                value="{{ value | escape }}" />
+        </div>
+        {% endmacro %}
+
+        {{ field('user') }}
+        {{ field('pass', type='password')}} -->
     </div>
 {% endblock %} 

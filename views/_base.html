@@ -12,7 +12,11 @@
 </head>
 <body>
     {% include '_navbar.html' %}
-    {% block content %}{% endblock %}
+
+    <main class="my-5">
+        {% block content %}{% endblock %}
+    </main>
+    
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.js"></script>
 </body>
