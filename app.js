@@ -19,7 +19,7 @@ app.set('view engine', 'njk')
 const PORT = '5000'
 
 app.get('/', (req, res) => {
-  res.render('home.html')
+  res.render('index.html')
 })
 
 app.listen(PORT, () => {
